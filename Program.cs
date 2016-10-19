@@ -1,15 +1,18 @@
 ﻿using System;
 
-namespace ConsoleApplication
-{
+
     public class Program
     {
-        public static PowerUps Health;
-        public static PowerUps Ammo;
+        public static Powerup Health = new Powerup();
+        public static Powerup Ammo = new Powerup();
         public static void Main(string[] args)
         {
+            Health.duration = 10;
             Health.RunPowerUp();
-            //Console.WriteLine(myString);
+            Console.WriteLine(Health.duration);
+            Ammo.RunPowerUp();
+
+            Health.RechargePowerUp(20);
+            Ammo.RechargePowerUp(300);
         }
     }
-}
