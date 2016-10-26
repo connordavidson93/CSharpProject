@@ -9,7 +9,7 @@
             Console.WriteLine("Please type in your name.");
             myGame.name = Console.ReadLine();
             Console.WriteLine("Your Player Name is " + myGame.name);
-        
+            myGame.Start();
         }
             
     }
