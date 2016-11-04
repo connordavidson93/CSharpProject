@@ -52,7 +52,7 @@ public class Game {
         System.Threading.Thread.Sleep(2000);
     }
     //Game Levels
-    private LevelBase Cave = new LevelBase();
+    private LevelBase Cave = new CaveLevel();
     public static LevelBase UnderWater = new LevelBase();
 
 
