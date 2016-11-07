@@ -1,5 +1,6 @@
 using System;
 public class LevelBase{
+    public WeaponBase M16 = new WeaponBase();
     public string StartMessage;
     public bool entranceOpen = true;
     public string[] environment;
@@ -28,7 +29,10 @@ public class LevelBase{
 
                 case  3:
                     Console.WriteLine("You've walked into " + objects[i]);
-                    //Lava kills us and ends the game.
+                    if(objects[i] == "Shark"){
+                        M16.SemiAutoFire();
+                    }
+                    //Danger kills us and ends the game.
                     Game.canPlay = false;
                 break;
 
