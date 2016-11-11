@@ -29,10 +29,8 @@ public class LevelBase{
 
                 case  3:
                     Console.WriteLine("You've walked into " + objects[i]);
-                    if(objects[i] == "Shark"){
-                        M16.SemiAutoFire();
-                    }
-                    //Danger kills us and ends the game.
+                    GameState.currentGameState = GameState.GameStates.Died;
+                    //Kills us and ends the game.
                     Game.canPlay = false;
                 break;
 
